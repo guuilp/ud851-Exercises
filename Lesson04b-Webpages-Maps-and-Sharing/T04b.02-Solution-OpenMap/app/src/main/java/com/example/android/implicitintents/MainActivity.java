@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String QUERY_PARAMETER = "q";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("geo")
                 .path("0,0")
-                .query(addressString);
+                .appendQueryParameter(QUERY_PARAMETER, addressString);
         Uri addressUri = builder.build();
 
         // COMPLETED (7) Replace the Toast with a call to showMap, passing in the Uri from the previous step

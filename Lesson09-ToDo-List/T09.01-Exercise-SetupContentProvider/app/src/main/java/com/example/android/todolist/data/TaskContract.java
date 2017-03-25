@@ -25,7 +25,6 @@ public class TaskContract {
     /* TaskEntry is an inner class that defines the contents of the task table */
     public static final class TaskEntry implements BaseColumns {
 
-
         // Task table and column names
         public static final String TABLE_NAME = "tasks";
 
